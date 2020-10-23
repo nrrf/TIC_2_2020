@@ -12,9 +12,13 @@ package sesiones;
 
 public class Sesion5{
     public static void main(String[] args) {
-        Perro miPerro = new Perro(5, "Toby", "Blue");
-        System.out.println(miPerro.getEdad());
-        miPerro.saludar();
+        Perro miPerro1 = new Perro(5, "Toby", "Blue");
+        Perro miPerro2 = new Perro(7, "Vainilla", "Negro");
+        Perro miPerro3 = new Perro(5, "Bony", "Amarillo");
+        System.out.println(miPerro1.getEdad());
+        miPerro1.saludar();
+        System.out.println(miPerro1.quienEsMayor(miPerro2));
+        System.out.println(miPerro1.saludarOtroPerro(miPerro2));
     }
 }
 
@@ -62,5 +66,18 @@ class Perro {
         System.out.println
         ("Hola, mi nombre es " + nombre);
     }
-
+    public String quienEsMayor(Perro otroPerro){
+        if (this.edad > otroPerro.edad) {
+            return ("Soy mayor que " + otroPerro.nombre);
+        } else if (this.edad == otroPerro.edad) {
+            return ("Tenemos la misma edad");
+        } else {
+            return(otroPerro.nombre + " es mayor que yo");
+        }
+    }
+    
+    public String saludarOtroPerro(Perro otroPerro) {
+        return ("Hola " + otroPerro.nombre + ", yo soy "
+         + this.nombre);
+    }
 }
