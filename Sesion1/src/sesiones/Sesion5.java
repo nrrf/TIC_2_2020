@@ -14,6 +14,7 @@ public class Sesion5{
     public static void main(String[] args) {
         Perro miPerro = new Perro(5, "Toby", "Blue");
         System.out.println(miPerro.getEdad());
+        miPerro.saludar();
     }
 }
 
