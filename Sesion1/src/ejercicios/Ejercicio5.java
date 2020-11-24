@@ -50,9 +50,11 @@ public class Ejercicio5 {
             
             if (!(mientrada.equals("3"))){
                 x = mientrada.split("\\&");
+                /*
                 for (String string : x) {
                     System.out.println(string);
                 }
+*/
          
                 if(x[0].equals("1")){
                     productos.add(x[1]); 
